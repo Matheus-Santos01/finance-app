@@ -1,0 +1,224 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background-color: #181C1B;
+}
+
+body *{
+  font-family: 'Inter', sans-serif;
+  color: #e9e9e9;
+}
+
+button{
+  cursor: pointer;
+}
+
+#app{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+  align-items: center;
+}
+
+#app main{
+  width: 60%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+#app main .add{
+  background-color: transparent;
+  padding: 1.4rem;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 3rem;
+}
+
+.dashboard{
+  width: 100%;
+}
+
+.dashboard .register{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #7b7b7b;
+  cursor: pointer;
+}
+
+.dashboard .register:last-child{
+  border: none;
+}
+
+.register .info-register{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.register .info-register .icon-register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+}
+
+.register .info-register .icon-register#income{
+  background-color: #cfd8d5;
+}
+
+.register .info-register .icon-register#expense{
+  background-color: #fdd8d3;
+}
+
+.register .info-register .details-register p{
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.register .info-register .details-register span{
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #ddd;
+}
+
+.register .value-register p{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.modal{
+  background-color: #242424;
+  border: none;
+  margin: auto;
+  max-width: 41rem;
+  max-height: 43.3rem;
+  width: 60%;
+  height: 65%;
+  border-radius: .8rem;
+}
+
+.modal::backdrop{
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.modal .buttons{
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 3.6rem 0 2.4rem;
+}
+
+.modal .buttons button{
+  background-color: transparent;
+  border: 2px solid #eee;
+  padding: 1.2rem 1.6rem;
+  border-radius: .8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  transition: 300ms ease;
+}
+
+.modal .buttons button:hover{
+  transform: scale(1.1);
+}
+
+.modal .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal .content .form-expense{
+  display: none;
+}
+
+.modal .content form div{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.4rem;
+}
+
+.modal .content form label{
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.modal .content form input{
+  background-color: transparent;
+  border: 1px solid #eee;
+  border-radius: .5rem;
+  padding: .8rem;
+  outline: none;
+}
+
+.modal .content form input[type='date']{
+  cursor: pointer;
+}
+
+.modal .content form input::placeholder{
+  color: #eee;
+}
+
+.modal .content form input[type='date']::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+.modal .content form button{
+  background: transparent;
+  border: none;
+  border-radius: .4rem;
+  padding: .8rem 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+  margin: auto;
+  margin-top: 3.6rem;
+}
+
+.modal .content form button.btn-income{
+  background-color: #009c5a;
+  transition: 300ms ease;
+}
+
+.modal .content form button.btn-income:hover{
+  background-color: #007a47;
+}
+
+.modal .content form button.btn-expense{
+  background-color: #f93f22;
+  transition: 300ms ease;
+}
+
+.modal .content form button.btn-expense:hover{
+  background-color: #f82a0a;
+}
+
+@media (max-width: 580px) {
+  #app main{
+    width: 80%;
+  }
+
+  .modal{
+    width: 80%;
+  }
+}

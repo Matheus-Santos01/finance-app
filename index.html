@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Finanças</title>
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  
+  <div id="app">
+
+    <header>
+      <h1>Seu App Finanças</h1>
+    </header>
+  
+    <main>
+
+      <section class="dashboard">
+      </section>
+
+      <button class="add" onclick="openModal(modal)">
+        <img src="./assets/plus.svg" alt="Icon plus">
+      </button>
+    </main>
+  
+  </div>
+
+
+  <dialog class="modal">
+    <div class="buttons">
+      <button class="income">Entradas</button>
+      <button class="expense">Saidas</button>
+    </div>
+
+    <div class="content">
+
+      <form class="form-income">
+        <div>
+          <label for="value">Valor:</label>
+          <input type="number" class="value" name="value" placeholder="Digite aqui" required>
+        </div>
+  
+        <div>
+          <label for="description">Descrição:</label>
+          <input type="text" class="description" name="description" placeholder="Ex: Salário" required>
+        </div>
+        
+        <div>
+          <label for="date">Data:</label>
+          <input type="date" class="date" name="date" required>
+        </div>
+  
+        <button class="btn-income" onclick="addIncome(event)">Cadastrar</button>
+      </form>
+
+      <form class="form-expense">
+        <div>
+          <label for="value">Valor:</label>
+          <input type="namber" class="value" name="value" placeholder="Digite aqui" required>
+        </div>
+  
+        <div>
+          <label for="description">Descrição:</label>
+          <input type="text" class="description" name="description" placeholder="Ex: Conta de luz" required>
+        </div>
+        
+        <div>
+          <label for="date">Data:</label>
+          <input type="date" class="date" name="date" required>
+        </div>
+  
+        <button class="btn-expense" onclick="addExpense(event)">Cadastrar</button>
+      </form>
+
+    </div>
+  </dialog>
+
+  <dialog class="modal update-register">
+    <div class="content">
+
+      <form class="form-update">
+        <div>
+          <label for="value">Valor:</label>
+          <input type="number" class="value" name="value" placeholder="Digite aqui" required>
+        </div>
+  
+        <div>
+          <label for="description">Descrição:</label>
+          <input type="text" class="description" name="description" placeholder="Ex: Salário" required>
+        </div>
+        
+        <div>
+          <label for="date">Data:</label>
+          <input type="date" class="date" name="date" required>
+        </div>
+  
+        <button class="btn-income" onclick="">Atualizar</button>
+      </form>
+
+    
+    </div>
+  </dialog>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
